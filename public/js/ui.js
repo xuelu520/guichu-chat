@@ -1,4 +1,5 @@
-s,
+var 
+总视窗=this,
 总文档=document,
 文档正文=总文档.body,
 浏览器=navigator,
@@ -275,7 +276,7 @@ var
 
 
 
-
+$(function(){
 var 
 网络隧道,
 初次获取用户信息=1,
@@ -301,7 +302,7 @@ var
 		}
 	});
 
-	网络隧道.on("close", =function(){
+	网络隧道.on("close", function(){
 		控制台.log(/网络隧道断线/)
 	});
 
@@ -309,7 +310,7 @@ var
 		控制台.log(/ERROR/,事件.data)
 	});
 
-
+});
 
 
 
