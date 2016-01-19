@@ -4,7 +4,7 @@
 ---  
 
 ##环境依赖  
-* node.js  
+* node.js  版本 v0.10.37
 * express  
 * socket.io  
 
