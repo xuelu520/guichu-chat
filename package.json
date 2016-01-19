@@ -1,0 +1,27 @@
+{
+  "name": "guichu-chat",
+  "version": "1.0.0",
+  "description": "guichu chat",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xuelu520/guichu-chat.git"
+  },
+  "keywords": [
+    "guichu",
+    "chat"
+  ],
+  "author": "mak",
+  "license": "mit",
+  "bugs": {
+    "url": "https://github.com/xuelu520/guichu-chat/issues"
+  },
+  "homepage": "https://github.com/xuelu520/guichu-chat",
+  "dependencies": {
+    "express": "^3.4.8",
+    "socket.io": "^1.4.4"
+  }
+}

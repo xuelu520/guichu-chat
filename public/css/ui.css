@@ -1,0 +1,406 @@
+body,h1,h2,h3,h4,h5,p,form,ol,ul{margin:0;}
+ol,ul{padding:0;}
+html{font:1.3em "Avenir Next",Avenir,"Helvetica Neue",Helvetica,"Lantinghei SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑", "STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;color:#222;}
+
+textarea,input,option,select,button{font:inherit;}
+
+
+
+textarea:focus,
+button:focus,
+input:focus{outline:none;}
+a{color:#333;text-decoration:none;}
+
+::selection{background:rgba(0,149,255,0.1);}
+
+a,input,button{transition:.3s ease;}
+
+
+
+
+html{
+	height:100%;
+	overflow:hidden;
+	background:#FFF url(http://ww2.sinaimg.cn/large/69917555jw1eo4ek6e50lj20b40b4t9e.jpg) no-repeat bottom center;
+	background-size:200px;
+
+	text-align:center;
+}
+
+
+body{
+	height:100%;
+	overflow:hidden;
+}
+#弹幕框{
+	height:100%;
+	position:absolute;
+	top:0;bottom:0;left:0;right:0;
+	overflow:hidden;
+}
+
+
+h1{
+	padding:1em;
+}
+
+
+
+.屏蔽{
+	display:none;
+}
+
+
+#登录框{
+	position:absolute;
+	top:0;left:0;bottom:0;right:0;
+	z-index:2;
+
+	background:#FFF;
+	background:rgba(255,255,255,.92);
+
+	transition:opacity .8s ease;
+}
+#登录框.隐藏{
+	opacity:0;
+	pointer-events:none;
+}
+
+#登录框 h2{
+	text-indent:.3em;
+	font-size:3em;
+	padding:1em 0 .5em;
+}
+#登录框 button{
+	margin:.5em;
+}
+#登录框 p{
+	padding:.5em 0;
+	color:#999;
+}
+#登录框 small{
+	display:block;
+	font-size:.8em;
+	line-height:2;
+}
+#登录框 big{
+	font-size:3em;
+}
+#登录框 a{
+
+}
+
+#最后一位用户{
+	display:inline-block;
+	line-height:2em;
+}
+#最后一位用户 img{
+	width:2em;
+	height:2em;
+}
+
+#成员数量{
+	font-size:.5em;
+}
+
+#关闭登录框按钮{
+	position:absolute;
+	left:0;right:0;
+	bottom:0;
+	font-size:4em;
+	line-height:1em;
+	text-align:center;
+	padding:.5em 0;
+	color:#df3e3e;
+	cursor:pointer;
+}
+#关闭登录框按钮:hover{
+	background:#df3e3e;
+	color:#FFF;
+}
+
+button{
+	background:#df3e3e;
+	color:#FFF;
+	border:0;
+	border-radius:.2em;
+
+	font-size:2em;
+	line-height:2;
+	padding:0 1em;
+	cursor:pointer;
+
+/*	position:fixed;
+	top:50%;left:50%;
+	-webkit-transform:translateX(-50%) translateY(-100%);*/
+}
+
+
+
+
+
+
+#用户框{
+	position:absolute;
+	top:0;right:0;
+
+	line-height:2em;
+	margin:1em 1.5em;
+}
+#用户框 img{
+	width:2em;
+	height:2em;
+	float:left;
+	border-radius:9em;
+	margin-right:.4em;
+}
+
+
+.标贴{
+	display:inline-block;
+	background:rgba(239,236,201,.5);
+	font-size:16px;
+	text-shadow:0 1px 0 rgba(100,0,0,.2);
+	padding:.5em .7em;
+	border-radius:.5em;
+
+	text-align:center;
+	max-width:400px;
+	position:absolute;
+			animation:dlout 60s ease;
+	   -moz-animation:dlout 60s ease;
+	-webkit-animation:dlout 60s ease;
+}
+.标贴 img{
+	vertical-align:bottom;
+}
+
+
+.标贴[用户唯一号="0"]{
+	background:rgba(243,44,44,.5) !important;
+	color:#FFF;
+	box-shadow:0 1px 15px rgba(0,0,0,.1);
+}
+
+
+@keyframes dlout{
+	to{opacity:0;}
+}
+@-moz-keyframes dlout{
+	to{opacity:0;}
+}
+@-webkit-keyframes dlout{
+	to{opacity:0;}
+}
+
+
+
+.标贴.隐藏{
+			animation:stickFin 1s ease;
+	   -moz-animation:stickFin 1s ease;
+	-webkit-animation:stickFin 1s ease;
+}
+@-webkit-keyframes stickFin{
+	0%{
+		opacity:0;
+		-webkit-transform:perspective(400px) translateZ(-50px) rotateX(-30deg) scale(.7);
+	}
+	100%{-webkit-transform:perspective(400px) translateZ(0) rotateY(0) scale(1);}
+}
+@-moz-keyframes stickFin{
+	0%{
+		opacity:0;
+		-moz-transform:perspective(400px) translateZ(-50px) rotateX(-30deg) scale(.7);
+	}
+	100%{-moz-transform:perspective(400px) translateZ(0) rotateY(0) scale(1);}
+}
+@-ms-keyframes stickFin{
+	0%{
+		opacity:0;
+		-ms-transform:perspective(400px) translateZ(-50px) rotateX(-30deg) scale(.7);
+	}
+	100%{-ms-transform:perspective(400px) translateZ(0) rotateY(0) scale(1);}
+}
+@keyframes stickFin{
+	0%{
+		opacity:0;
+		transform:perspective(400px) translateZ(-50px) rotateX(-30deg) scale(.7);
+	}
+	100%{transform:perspective(400px) translateZ(0) rotateY(0) scale(1);}
+}
+
+
+#在线列表{
+	position:absolute;
+	left:0;top:0;
+	text-align:left;
+	margin:.5em;
+}
+
+.用户卡片{
+	background:rgba(239,236,201,.5);
+	background:none !important;
+	text-shadow:0 1px 0 rgba(100,0,0,.2);
+	
+	border-radius:.5em;
+	height:2em;
+	line-height:2em;
+	padding:.5em .7em;
+
+	transition:.3s ease;
+	overflow:hidden;
+}
+
+.用户卡片.转入{
+
+			animation:上线提示转入效果 1s ease;
+	   -moz-animation:上线提示转入效果 1s ease;
+	-webkit-animation:上线提示转入效果 1s ease;
+}
+
+.用户卡片 img{
+	float:left;
+	width:2em;height:2em;
+	border-radius:9em;
+	margin-right:.4em;
+}
+
+.用户卡片 i{
+	display:inline-block;
+	vertical-align:middle;
+	margin:-.2em 0 0 .4em;
+	width:1em;height:1em;
+	border-radius:9em;
+}
+
+
+.用户卡片.隐藏{
+	height:0;
+	padding:0 .7em;
+	opacity:0;
+}
+@-webkit-keyframes 上线提示转入效果{
+	0%{
+		opacity:0;
+		-webkit-transform:perspective(400px) translateZ(-50px) rotateX(-30deg) scale(.7);
+	}
+	100%{-webkit-transform:perspective(400px) translateZ(0) rotateY(0) scale(1);}
+}
+@-moz-keyframes 上线提示转入效果{
+	0%{
+		opacity:0;
+		-moz-transform:perspective(400px) translateZ(-50px) rotateX(-30deg) scale(.7);
+	}
+	100%{-moz-transform:perspective(400px) translateZ(0) rotateY(0) scale(1);}
+}
+@-ms-keyframes 上线提示转入效果{
+	0%{
+		opacity:0;
+		-ms-transform:perspective(400px) translateZ(-50px) rotateX(-30deg) scale(.7);
+	}
+	100%{-ms-transform:perspective(400px) translateZ(0) rotateY(0) scale(1);}
+}
+@keyframes 上线提示转入效果{
+	0%{
+		opacity:0;
+		transform:perspective(400px) translateZ(-50px) rotateX(-30deg) scale(.7);
+	}
+	100%{transform:perspective(400px) translateZ(0) rotateY(0) scale(1);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.震铃{
+	
+			animation:ring 1s ease;
+	   -moz-animation:ring 1s ease;
+	-webkit-animation:ring 1s ease;}
+
+
+
+/* 震铃 */
+@-webkit-keyframes ring{
+	0%{-webkit-transform:scale(1);}
+	10%,20%{-webkit-transform:scale(0.9) rotate(-3deg);}
+	30%,50%,70%,90%{-webkit-transform:scale(1.1) rotate(3deg);}
+	40%,60%,80%{-webkit-transform:scale(1.1) rotate(-3deg);}
+	100%{-webkit-transform:scale(1) rotate(0);}
+}
+@-moz-keyframes ring{
+	0%{-moz-transform:scale(1);}
+	10%,20%{-moz-transform:scale(0.9) rotate(-3deg);}
+	30%,50%,70%,90%{-moz-transform:scale(1.1) rotate(3deg);}
+	40%,60%,80%{-moz-transform:scale(1.1) rotate(-3deg);}
+	100%{-moz-transform:scale(1) rotate(0);}
+}
+@-ms-keyframes ring{
+	0%{-ms-transform:scale(1);}
+	10%,20%{-ms-transform:scale(0.9) rotate(-3deg);}
+	30%,50%,70%,90%{-ms-transform:scale(1.1) rotate(3deg);}
+	40%,60%,80%{-ms-transform:scale(1.1) rotate(-3deg);}
+	100%{-ms-transform:scale(1) rotate(0);}
+}
+@keyframes ring{
+	0%{transform:scale(1);}
+	10%,20%{transform:scale(0.9) rotate(-3deg);}
+	30%,50%,70%,90%{transform:scale(1.1) rotate(3deg);}
+	40%,60%,80%{transform:scale(1.1) rotate(-3deg);}
+	100%{transform:scale(1) rotate(0);}
+}
+
+
+
+
+#表单{
+	position:absolute;
+	bottom:5em;
+	left:50%;
+	z-index:2;
+	width:18em;
+
+	margin:0 0 0 -9em;
+
+	font-size: 1.4em;
+
+	transition:1s ease;
+}
+#表单 input{
+	border-radius: .5em;
+	border: 0;
+	margin: 0;
+	padding: .5em 1em;
+	width: 15em;
+	background: #e8e8e8;
+	background: rgba(230,230,230,.7);
+	text-align: center;
+}
+
+#表单 input:focus{
+	outline:none;
+	box-shadow:0 .3em 1em rgba(0,0,0,.05);
+}
+
+
+
+
+
+#表单.隐藏{
+	bottom:2em;
+	opacity:0;
+}
+
+
+
+#返回 a{
+	font-size:5em;
+	color:#999;
+}
