@@ -13,4 +13,4 @@
 * cd guichu-chat  
 * npm install  
 * node app.js  
-* 修改host文件   你的IP  chat.io
+* 由于WEBSOCKET接口用的是域名，所以请修修改host文件   你的IP  chat.io
