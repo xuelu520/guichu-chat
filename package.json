@@ -15,7 +15,7 @@
     "chat"
   ],
   "author": "mak",
-  "license": "mit",
+  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/xuelu520/guichu-chat/issues"
   },
