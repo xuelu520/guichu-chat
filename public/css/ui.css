@@ -21,7 +21,7 @@ a,input,button{transition:.3s ease;}
 html{
 	height:100%;
 	overflow:hidden;
-	background:#FFF url(http://ww2.sinaimg.cn/large/69917555jw1eo4ek6e50lj20b40b4t9e.jpg) no-repeat bottom center;
+	background:#FFF url(../img/logo.png) no-repeat bottom center;
 	background-size:200px;
 
 	text-align:center;
